@@ -1,0 +1,313 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+    color: black;
+    background-color: #6e6e6e;
+
+}
+
+.intro ~ div {
+    font-size: 16px;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #414142;
+    height: 300px;
+    text-align: center;
+    min-width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+.about p {
+    color: #000000;
+}
+
+.intro ~ div {
+    min-width: 100%;
+}
+
+h1, h3 {
+    text-align: center;
+    color: rgb(213 222 54)
+}
+
+.site {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 48px;
+}
+
+.site p {
+    width: 217px;
+    max-height: 200px;
+    text-align: center;
+    font-size: 12px;
+}
+
+img {
+    width:400px; 
+    min-height: 230px;
+    padding: 6px;
+    border: solid black 1px;
+    border-radius: 6px;
+    height: auto;
+}
+
+.site:nth-of-type(2n+1) {
+    flex-wrap: wrap-reverse;
+    
+}
+
+.sub:nth-of-type(2n+0) {
+    background-color: #ffffff;
+    color: black;
+}
+
+.content {
+    max-width: 50%;
+    margin: auto;
+}
+
+h1 {
+    text-shadow: 2px 2px #000000;
+}
+
+
+.sites .content {
+    max-width: 100%;
+}
+
+h3 {
+    padding-bottom: 12px;
+    margin-bottom: 0px;
+    color: rgb(65 65 66);
+}
+
+.sub-top {
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 24px;
+}
+
+.sub .site {
+    max-width: 643px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sub {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.site p:nth-of-type(2n+1) {
+    margin-left: 6px;
+}
+
+.site p:nth-of-type(3n+1) {
+    margin-right: 6px;
+}
+
+ul {
+    list-style: none;
+    line-height: 32px;
+    width: 450px;
+    max-height: 256px;
+    border: solid black 1px;
+    padding-left: 6px;
+    overflow-y: auto;
+}
+li {
+    font-size: 14px;
+    width: fit-content;
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text {
+    width: 450px;
+    height: 256px;
+    overflow:auto;
+    border: solid black 1px;
+    margin-top: 16px;
+    position: relative;
+    left: 200px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+}
+
+.text p {
+    text-align: center;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+@keyframes slideleft {
+    from {
+        opacity: 0;
+        left: 200px;
+    }
+    to {
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+@keyframes slideright {
+    from {
+        opacity: 1;
+        left: 0px;
+    }
+    to {
+        opacity: 0;
+        left: 200px;
+    }
+}
+
+#trans1 {
+    animation-name: slideright;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#trans2 {
+    animation-name: slideleft;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+li:hover {
+    cursor: pointer;
+    font-weight: 900;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+label img {
+    min-height: 35px;
+    width: 35px;
+    border: none;
+    position: relative;
+    top: 14px;
+}
+
+.answer, .a-one, .a-two, .a-three {
+    height: 0;
+    font-size: 16px;
+    width: 790px;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 0;
+}
+
+@keyframes open-ans {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 125px;
+    }
+}
+
+@keyframes close-ans {
+    from {
+        height: 125px;
+    }
+    to {
+        height: 0px;
+    }
+}
+
+#open {
+    animation-name: open-ans;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    overflow: hidden;
+
+}
+
+#close {
+    animation-name: close-ans;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    overflow: hidden;
+
+}
+
+input:checked ~ label > img{
+    content: url('images/chevron-up.svg');
+    min-height: 35px;
+    width: 35px;
+    border: none;
+    position: relative;
+    top: 14px;
+}
+
+.faq {
+    background-color: #FFFFFF;
+    padding-bottom: 24px;
+}
+
+.faq h2{
+    margin-left: 24px;
+}
+
+h2 span {
+    color: rgb(213 222 54);
+    text-shadow: 2px 2px #000000;
+}
+
+.answer span {
+    color: rgb(213 222 54);
+}
+
+.a-container {
+    background-color: #f7f7f7;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
