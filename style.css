@@ -231,6 +231,7 @@ label img {
     font-size: 16px;
     width: 790px;
     overflow: hidden;
+    display: flex;
 }
 
 h2 {
@@ -310,4 +311,22 @@ h2 span {
 
 .footer p {
     margin: 0;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+a {
+    color:rgb(213 222 54);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(112 195 3);
+}
+
+span + p {
+    margin: 0;
+    margin-left: 12px;
 }
