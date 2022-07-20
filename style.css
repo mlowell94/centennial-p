@@ -331,6 +331,10 @@ span + p {
     margin-left: 12px;
 }
 
+.sub-top p {
+    max-width: 50%;
+}
+
 @media screen and (max-width: 960px) {
     html {
         overflow-x: hidden;
@@ -439,5 +443,7 @@ span + p {
         overflow: scroll;
     }
 
-
+    .sub-top p {
+        max-width: 95%;
+    }
   }
